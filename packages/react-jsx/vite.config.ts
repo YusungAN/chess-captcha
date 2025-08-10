@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), dts({ insertTypesEntry: true })],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'index.ts'),
       name: 'ChessCaptchaReact',
       fileName: (format) => `chess-captcha-react.${format}.js`,
     },

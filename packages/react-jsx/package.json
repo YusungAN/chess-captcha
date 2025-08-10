@@ -1,7 +1,6 @@
 {
-  "name": "react-jsx",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@chess-captcha/react-jsx",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",

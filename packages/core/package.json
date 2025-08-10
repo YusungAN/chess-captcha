@@ -1,6 +1,6 @@
 {
-  "name": "core",
-  "version": "1.0.0",
+  "name": "@chess-captcha/core",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "types": "dist/index.d.ts",
