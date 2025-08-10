@@ -1,0 +1,86 @@
+.chess-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.board-container {
+  border: 3px solid #8b4513;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* transition: all 0.2s ease; */
+  position: relative;
+}
+
+.square.white {
+  background-color: #f0d9b5;
+}
+
+.square.black {
+  background-color: #b58863;
+}
+
+/* .square:hover {
+  transform: scale(1.05);
+} */
+
+
+/* .square.valid-move {
+  background-color: #90ee90 !important;
+} */
+
+.square.valid-move::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgba(18, 18, 18, 0.3);
+}
+
+.square.drag-over {
+  /* background-color: #87ceeb !important; */
+  border: 3px solid rgba(219, 219, 219);
+  box-sizing: border-box;
+}
+
+.piece {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.square.selected img {
+  opacity: 0.5;
+}
+
+.piece-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* .piece:hover .piece-image {
+  transform: scale(1.1);
+} */
+
+/* 드래그 이미지용 별도 스타일 */
+.drag-image .piece-image {
+  transform: none;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "chess-captcha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter react-jsx dev",
+    "build": "pnpm -r --stream build",
+    "lint": "pnpm -r lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "eslint": "^9.32.0",
+    "path": "^0.12.7",
+    "typescript": "^5.9.2",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  }
+}
