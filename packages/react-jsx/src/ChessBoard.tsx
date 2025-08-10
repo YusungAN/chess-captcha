@@ -18,7 +18,6 @@ import blackKing from "./assets/black-king.png";
 
 export interface ChessBoardProps {
   onMove: (move: string) => void;
-  onReset: () => void;
   FEN: string; // Add optional initialFEN prop
   width?: number; // 체스판의 너비 (픽셀 단위)
 }

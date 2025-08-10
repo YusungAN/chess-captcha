@@ -1,1 +1,1 @@
-export { default as ChessCaptcha } from "./dist";
+export { ChessCaptcha } from "./dist/index.js";
