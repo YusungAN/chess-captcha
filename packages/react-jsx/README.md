@@ -2,20 +2,20 @@
 
 A React chessboard component for chess-based CAPTCHA systems. Features interactive drag-and-drop functionality, customizable board size, and real-time move validation. Built with TypeScript, React, and chess.js.
 
-This component is designed to work with the [@chess-captcha/core](https://www.npmjs.com/package/@chess-captcha/core) library, which provides the CAPTCHA puzzle generation and verification logic.
+This component is designed to work with the [chess-captcha-core](https://www.npmjs.com/package/chess-captcha-core) library, which provides the CAPTCHA puzzle generation and verification logic.
 
 ## Installation
 
 ### React Component
 
 ```bash
-npm i @chess-captcha/react-jsx
+npm i chess-captcha-react-jsx
 ```
 
 ## Quick Start
 
 ```tsx
-import { ChessBoard } from "@chess-captcha/react-jsx";
+import { ChessBoard } from "chess-captcha-react-jsx";
 
 function App() {
   const [FEN, setFEN] = useState(

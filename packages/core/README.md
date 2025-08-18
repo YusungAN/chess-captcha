@@ -1,12 +1,12 @@
 # @chess-captcha/core
 
 A chess-based CAPTCHA library that generates mate-in-1 puzzles using Stockfish engine. Built with TypeScript, React, and chess.js.
-For the React chessboard component for this CAPTCHA, see [@chess-captcha/react-jsx](https://www.npmjs.com/package/@chess-captcha/react-jsx)
+For the React chessboard component for this CAPTCHA, see [chess-captcha-react-jsx](https://www.npmjs.com/package/chess-captcha-react-jsx)
 
 ## Installation
 
 ```bash
-npm i @chess-captcha/core
+npm i chess-captcha-core
 ```
 
 ## Quick Start
@@ -14,7 +14,7 @@ npm i @chess-captcha/core
 ### Core CAPTCHA Engine
 
 ```typescript
-import { ChessCaptcha } from "chess-captcha";
+import { ChessCaptcha } from "chess-captcha-core";
 
 // Create a captcha instance
 const captcha = new ChessCaptcha({

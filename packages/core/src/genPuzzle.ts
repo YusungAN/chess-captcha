@@ -2,13 +2,15 @@ import { Chess, PieceSymbol, Color, Square, validateFen } from "chess.js";
 import { getRandomInt } from "./util";
 import path from "path";
 
+const loadEngine = require("./loadEngine.cjs");
+const foundStockfishPath = require.resolve("stockfish/package.json");
+const stockfishRootDir = path.dirname(foundStockfishPath);
+
 const stockfish_path = path.join(
-  "node_modules",
-  "stockfish",
+  stockfishRootDir,
   "src",
   "stockfish-nnue-16.js"
 );
-const loadEngine = require("./loadEngine.cjs");
 
 const engine = loadEngine(stockfish_path);
 
