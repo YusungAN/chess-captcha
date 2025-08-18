@@ -66,7 +66,7 @@ function App() {
         )}
         {captcha && (
           <div style={{ width: "300px" }}>
-            <ChessBoard onMove={handleMove} FEN={captcha} width={300} />
+            <ChessBoard onMove={handleMove} FEN={captcha} width={480} />
           </div>
         )}
       </main>

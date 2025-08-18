@@ -4,6 +4,9 @@ A React chessboard component for chess-based CAPTCHA systems. Features interacti
 
 This component is designed to work with the [chess-captcha-core](https://www.npmjs.com/package/chess-captcha-core) library, which provides the CAPTCHA puzzle generation and verification logic.
 
+
+![Image](https://github.com/YusungAN/chess-captcha/blob/main/example/example.gif?raw=true)
+
 ## Installation
 
 ### React Component

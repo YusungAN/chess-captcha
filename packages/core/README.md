@@ -3,6 +3,9 @@
 A chess-based CAPTCHA library that generates mate-in-1 puzzles using Stockfish engine. Built with TypeScript, React, and chess.js.
 For the React chessboard component for this CAPTCHA, see [chess-captcha-react-jsx](https://www.npmjs.com/package/chess-captcha-react-jsx)
 
+![Image](https://github.com/YusungAN/chess-captcha/blob/main/example/example.gif?raw=true)
+
+
 ## Installation
 
 ```bash
