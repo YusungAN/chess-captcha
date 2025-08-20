@@ -4,18 +4,20 @@ A chess-based CAPTCHA library that generates mate-in-1 puzzles using Stockfish e
 
 ![Image](https://github.com/YusungAN/chess-captcha/blob/main/example/example.gif)
 
+The example code for this GIF is in the ```/example``` directory.
+
 ## Installation
 
 ### Core Package
 
 ```bash
-npm install chess-captcha
+npm install chess-captcha-core
 ```
 
 ### React Component
 
 ```bash
-npm install @chess-captcha/react-jsx
+npm install chess-captcha-react-jsx
 ```
 
 
