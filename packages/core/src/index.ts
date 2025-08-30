@@ -25,8 +25,6 @@ export class ChessCaptcha {
   private fenQueue: string[] = [];
   private config: CaptchaConfig;
   private preFENlist: string[] = [];
-  private isRefilling: boolean = false;
-  private generationPromise: Promise<void> | null = null;
   private refillPromise: Promise<void> | null = null;
 
   constructor(config: Partial<CaptchaConfig> = {}) {
@@ -105,34 +103,6 @@ export class ChessCaptcha {
     };
   }
 
-  private ensureFirstCaptchaExists(): Promise<void> {
-    // 3. 이미 다른 요청이 '대표'가 되어 캡차를 만들고 있다면,
-    // 그 작업이 끝나기를 함께 기다립니다.
-    if (this.generationPromise) {
-      return this.generationPromise;
-    }
-
-    // 4. 아무도 캡차를 만들고 있지 않다면, 내가 '대표'가 됩니다.
-    this.generationPromise = (async () => {
-      try {
-        // 큐가 여전히 비어있을 때만 딱 하나를 생성합니다.
-        if (this.fenQueue.length === 0) {
-          const { fen } = await getRandomMateIn1Fen();
-          if (fen === "") throw new Error("Failed to generate captcha");
-          this.fenQueue.push(fen);
-        }
-      } catch (error) {
-        // 실패 시에도 Promise를 반환하여 다른 요청의 대기를 풀어줘야 함
-        throw error;
-      } finally {
-        // 5. 작업이 끝나면 (성공/실패 무관) '대표' 자리를 비워줍니다.
-        this.generationPromise = null;
-      }
-    })();
-
-    return this.generationPromise;
-  }
-
   /**
    * Verify a captcha answer
    * @param secret - The captcha secret containing FEN and expiration
@@ -188,7 +158,6 @@ export class ChessCaptcha {
       try {
         while (this.fenQueue.length < this.config.queueCapacity) {
           const { fen } = await getRandomMateIn1Fen();
-
           if (fen === "") continue;
           this.fenQueue.push(fen);
         }

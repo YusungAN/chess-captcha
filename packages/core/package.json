@@ -1,6 +1,6 @@
 {
   "name": "chess-captcha-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "keywords": ["chess", "captcha", "chess-captcha", "chess-puzzle", "chess-game", "chess-board"],
+  "keywords": [
+    "chess",
+    "captcha",
+    "chess-captcha",
+    "chess-puzzle",
+    "chess-game",
+    "chess-board",
+    "FunCaptcha"
+  ],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.4.1",
